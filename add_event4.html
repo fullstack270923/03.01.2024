@@ -1,27 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Add event</title>
 </head>
-
 <body>
-
     <textarea id="largeTextarea" rows="10" cols="50">
         text area
     </textarea>
     <br />
-    X: <p id="x"></p>
-    Y: <p id="y"></p>
-
+    location: <p id="x_y">
     <script>
-
         // add event listener to 'mousemove' on largeTextarea
         // console.log(e)
         // look in e where is the mouse x and mouse y
         // in <p id="x"> write the X location. hint: e.x
         // in <p id="y"> write the Y location. hint: e.y
-
+        document.getElementById('largeTextarea').addEventListener('mousemove', (e) => {
+            document.getElementById('x_y').innerHTML = `${parseInt(e.x)}, ${parseInt(e.y)} px`
+        })
     </script>
 </body>
 
