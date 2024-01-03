@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Add event</title>
+    <style>
+        .button1 {
+            background-color: yellow;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <button class="button1" id="btn1" onclick="click_button()">Hover me</button> -->
+    <p>NAME: <input type="text" id="name_txt" /></p>
+    <button class="button1" id="btn1" onclick="">Say Hello</button>
+    <hr>
+    <p id="result"></p>
+    <script>
+
+        const result = document.getElementById('result')
+        const btn1 = document.getElementById('btn1')
+        const input_name = document.getElementById('name_txt')
+
+        // function click_button() {
+        //     result.innerHTML += 'hello ' + input_name.value + '! <br />'
+        //     result.innerHTML += `hello ${input_name.value}! <br />`
+        // }
+
+        // // 1
+        // btn1.addEventListener('click', click_button)
+
+        // // 2
+        // btn1.addEventListener('click', function click_button() {
+        //     result.innerHTML += `hello ${input_name.value}! <br />`
+        // })
+
+        // // 3
+        // btn1.addEventListener('click', function () {
+        //     result.innerHTML += `hello ${input_name.value}! <br />`
+        // })
+
+        // 4
+        btn1.addEventListener('click', () => {
+            result.innerHTML += `hello ${input_name.value}! <br />`
+        })  
+        
+        // 1.
+        // add event listener to onmouseover 'mouseover'
+        // btn1.style.backgroundColor = 'green'
+        // 2.
+        // add event listener to onmouseout 'mouseout'
+        // btn1.style.backgroundColor = 'yellow'
+        // 3.
+        // add button with text 'Show the time'
+        // when clicking it display the time. hint: Date()
+        // use addEventListener 'click'
+        // hint: `the time is ${Date()}`
+    </script>
+</body>
+
+</html>
