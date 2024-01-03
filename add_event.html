@@ -29,10 +29,10 @@
         const btn2 = document.getElementById('btn2')
         const input_name = document.getElementById('name_txt')
 
-        // function click_button() {
-        //     result.innerHTML += 'hello ' + input_name.value + '! <br />'
-        //     result.innerHTML += `hello ${input_name.value}! <br />`
-        // }
+        function click_button() {
+            result.innerHTML += 'hello ' + input_name.value + '! <br />'
+            result.innerHTML += `hello ${input_name.value}! <br />`
+        }
 
         // // 1
         // btn1.addEventListener('click', click_button)
@@ -48,7 +48,8 @@
         // })
 
         // 4
-        btn1.addEventListener('click', () => {
+        btn1.addEventListener('click', (e) => {
+            //console.log(e.target.id);
             result.innerHTML += `hello ${input_name.value}! <br />`
         })  
         
@@ -80,15 +81,17 @@
                                     ${(new Date()).getMilliseconds()} <br />`
         })
 
-        // input of the event - i.e. what key was pressed?
 
+        // input of the event - i.e. what key was pressed?
         document.addEventListener('keydown', () => {
             result.innerHTML += `key pressed <br />`
         })
 
-        // document.addEventListener('mousemove', () => {
-        //     result.innerHTML += `mouse moved <br />`
-        // })
+         document.addEventListener('mousemove', (e) => {
+             //result.innerHTML += `mouse moved <br />`
+             // arguments == [e]
+             console.log(e);
+         })
 
     </script>
 </body>

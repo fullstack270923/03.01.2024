@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Add event</title>
+    <style>
+        .circle_css {
+            width: 50px;
+            height: 50px;
+            background-color: lightgreen;
+            border: 3px solid blue;
+            border-radius: 50%;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="circle_css">
+
+
+    </div>
+    <!-- <button class="button1" id="btn1" onclick="click_button()">Hover me</button> -->
+    <script>
+        const circle = document.querySelector('.circle_css')
+        circle.style.left = '100px'
+        circle.style.top = '100px'
+
+        // 1
+        // function key_down(e) {
+
+        //     console.log(e)
+        //     switch (e.key) {
+        //         case 'ArrowUp': circle.style.top = parseInt(circle.style.top) - 10 + 'px'
+        //             break;
+        //         case 'ArrowDown': circle.style.top = parseInt(circle.style.top) + 10 + 'px'
+        //             break;
+        //         case 'ArrowRight': circle.style.left = parseInt(circle.style.left) + 10 + 'px'
+        //             break;
+        //         case 'ArrowLeft': circle.style.left = parseInt(circle.style.left) - 10 + 'px'
+        //             break;
+        //     }
+        // }
+
+        // document.addEventListener('keydown', key_down)
+
+        // short
+        document.addEventListener('keydown',  (e) => {
+            console.log(e)
+            switch (e.key) {
+                case 'ArrowUp': circle.style.top = parseInt(circle.style.top) - 10 + 'px'
+                    break;
+                case 'ArrowDown': circle.style.top = parseInt(circle.style.top) + 10 + 'px'
+                    break;
+                case 'ArrowRight': circle.style.left = parseInt(circle.style.left) + 10 + 'px'
+                    break;
+                case 'ArrowLeft': circle.style.left = parseInt(circle.style.left) - 10 + 'px'
+                    break;
+            }
+        })
+
+    </script>
+</body>
+
+</html>

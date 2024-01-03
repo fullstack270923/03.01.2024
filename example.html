@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Add event</title>
+    <style>
+        .button1 {
+            background-color: yellow;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <button class="button1" id="btn1" onclick="click_button()">Hover me</button> -->
+    <p>NAME: <input type="text" id="name_txt" /></p>
+    <button class="button1" id="btn1" onclick="on_click()">Say Hello</button>&nbsp;
+    <button class="button1" id="btn2" onclick="on_click()">Show the time</button>
+    <script>
+        function on_click(e) {
+            switch (e.target.id) {
+                case 'btn1':break
+                case 'btn2':break
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Add event</title>
+    <style>
+        .button1 {
+            background-color: yellow;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <button class="button1" id="btn1" onclick="click_button()">Hover me</button> -->
+    <p>NAME: <input type="text" id="name_txt" /></p>
+    <button class="button1" id="btn1" onclick="">Say Hello</button>&nbsp;
+    <button class="button1" style="background-color: aqua;" id="btn2" onclick="">Show the time</button>
+    <hr>
+    <p id="result"></p>
+    <script>
+
+        const result = document.getElementById('result')
+
+        const btn1_by_class = document.querySelector('.button1') // brings the first element of class .button
+        const btn1_by_id    = document.getElementById('btn1')
+
+        const input_name = document.getElementById('name_txt')
+
+        // 4
+        // btn1_by_class.addEventListener('click', () => {
+        //     result.innerHTML += `hello ${input_name.value}! <br />`
+        // })  
+
+        const buttons_by_class = document.querySelectorAll('.button1') 
+        for (let i = 0; i < buttons_by_class.length; i++) {
+            buttons_by_class[i].addEventListener('click', (e) => {
+                result.innerHTML += `hello ${input_name.value}! <br />`
+                console.log(e.target.id)
+            })  
+            buttons_by_class[i].addEventListener('click', () => {
+            result.innerHTML += `The time is ${Date()} <br />`
+        })
+        }
+
+    </script>
+</body>
+
+</html>
